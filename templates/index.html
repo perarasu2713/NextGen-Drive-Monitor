@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- 🔥 FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <!-- 🔥 FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- 📊 CHART -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
+
+    <title>AI Driver Monitoring</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<!-- ⚡ LOADER -->
+<div id="loader">
+    <div class="spinner"></div>
+    <p>Initializing AI System...</p>
+</div>
+
+
+<!-- 📊 GRAPH POPUP -->
+<div id="graphPopup" class="popup">
+
+    <button onclick="document.getElementById('graphPopup').style.display='none'">
+        Close ❌
+    </button>
+
+    <canvas id="chart"></canvas>
+
+</div>
+
+
+<!-- 🌌 BACKGROUND -->
+<canvas id="bgCanvas"></canvas>
+<div class="bg"></div>
+
+
+<!-- 🚗 TITLE WITH ICON -->
+<h1 class="title">
+    <i class="fa-solid fa-car-side"></i> NextGen Drive Monitor
+    <span style="font-size:14px; display:block; color:#94a3b8;">
+        Intelligent Driver Awareness System
+    </span>
+</h1>
+
+
+<!-- 🔥 TOP BAR -->
+<div class="top-bar">
+    <button id="soundBtn">
+        <i class="fa-solid fa-volume-high"></i> Sound ON
+    </button>
+
+    <button id="graphBtn">
+        <i class="fa-solid fa-chart-line"></i> Graph
+    </button>
+
+    <button id="fullBtn">
+        <i class="fa-solid fa-expand"></i> Fullscreen
+    </button>
+</div>
+
+
+<!-- 🔥 MAIN LAYOUT -->
+<div class="container">
+
+    <!-- 🎥 VIDEO -->
+    <div class="video-card">
+        <img src="/video">
+    </div>
+
+    <!-- 📊 DASHBOARD -->
+    <div class="dashboard">
+
+        <!-- STATUS -->
+        <div class="status-box">
+            <div class="ring">
+                <div class="inner-circle"></div>
+            </div>
+            <h2 id="status">AWAKE</h2>
+        </div>
+
+        <!-- ⚡ AI TAG -->
+        <p class="ai-tag">⚡ SYSTEM ACTIVE</p>
+
+        <!-- 📦 CARDS -->
+        <div class="cards">
+
+            <div class="card">
+                <p><i class="fa-solid fa-eye"></i> Blinks</p>
+                <h3 id="blinks">0</h3>
+            </div>
+
+            <div class="card">
+                <p><i class="fa-solid fa-face-surprise"></i> Yawns</p>
+                <h3 id="yawns">0</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- 🔥 SCRIPT -->
+<script src="/static/script.js"></script>
+
+</body>
+</html>
